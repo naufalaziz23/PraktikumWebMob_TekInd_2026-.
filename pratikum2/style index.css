@@ -1,0 +1,105 @@
+/* ===== LANGKAH 2 ===== */
+/* Import Font dari Google Fonts */
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap%27);
+body {
+    font-family: 'Roboto', sans-serif; 
+    background-color: #f4f4f4; /* Warna abu-abu muda untuk background*/
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50; /*Biru tua gelap*/
+    text-align: center;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+}
+
+/*  ===== LANGKAH 3 ===== */
+table {
+    width: 100%;
+    border-collapse: collapse; /*menggabungkan bordedr gandan menjadi satu*/
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba((0,0,0,0,.1), green, blue, alpha); /*Efek bayangan halus*/
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #2980b9; /*Biru profesional */
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1; /*highlight baris saat mouse diarahkan*/
+}
+
+/* ===== LANGKAH 4 ===== */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px; /*sudut melengkung*/
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%; /*lebar penuh*/
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* padding tidak menambah lebar total*/
+}
+
+/* Styling khusus tombol */
+button {
+    background-color: #27ae60; /*hijau*/
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px; 
+}
+
+button:hover {
+    background-color: #219150; /*hijau lebih gelap saat di hover*/
+}
+
+/* ===== LANGKAH 5 MELIHAT HASIL ===== */
+
+/* Latihann 1 Class selector */
+.status-ok {
+    color: #27ae60;
+    font-weight: bold;
+}
+.status-down {
+    color: red;
+    font-weight: bold;
+}
+
+/* LATIHAN 2 LAYOUT CONTAINER */
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+}
