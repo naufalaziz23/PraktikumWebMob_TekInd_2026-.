@@ -1,0 +1,23 @@
+
+// PROYEK MINI KALKULATOR BIAYA PRODUKSI
+let biayaBahanBaku = ("Rp" + 2500000);
+let biayaTenagaKerja = ("Rp" + 500000);
+let biayaOverhead = ("Rp" + 250000);
+let jumlahProduksi = (1000 + " Unit");
+
+//menampilkan data-data
+console.log("Biaya Bahan Baku : " + biayaBahanBaku)
+console.log("Biaya Tenaga Kerja : " + biayaTenagaKerja)
+console.log("Biaya Overhead : " + biayaOverhead)
+console.log("Jumlah Produksi saat ini  : " + jumlahProduksi)
+
+//perhitungan totalperunit
+let totalperunit = (biayaBahanBaku+biayaTenagaKerja+biayaOverhead)/ jumlahProduksi
+totalperunit = totalperunit.toFixed(2)
+
+// if/else pengecekan jumlah produksi
+if (jumlahProduksi < 100) {
+    console.log("Biaya Tinggi (Ekonomi Skala Kecil")
+} else {
+    console.log("Biaya Efisien")
+}
