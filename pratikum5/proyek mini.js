@@ -1,5 +1,15 @@
-// Pastikan variabel seperti antrianAwal dan fungsi tampilkanAntrian() 
-// juga ada di file ini (karena di potongan kodemu sepertinya terpotong di atasnya)
+
+let antrianAwal = [
+  { idJob: "J01", namaProses: "Cutting", durasi: 20 },
+  { idJob: "J02", namaProses: "Drilling", durasi: 30 }
+];
+let antrianMesin = [];
+
+function tampilkanAntrian() {
+  // Ganti dengan fungsi tampilkanAntrian() milikmu yang asli
+  console.log("Memperbarui tampilan antrian..."); 
+}
+
 
 function tambahLog(teks) {
   let log = document.getElementById("logProses");
