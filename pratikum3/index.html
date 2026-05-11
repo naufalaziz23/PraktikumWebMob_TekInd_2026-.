@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Produksi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TekInd Systems</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Input Produksi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inventori</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card text-white bg-primary">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Produksi</h5>
+                        <h2 class="card-text">1,250 Unit</h2>
+                        <p class="card-text"><small>Target Harian: 1,200 Unit</small></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+                <div class="card text-white bg-danger" id="card-efisiensi">
+                    <div class="card-body">
+                        <h5 class="card-title">Efisiensi Mesin</h5>
+                        <h2 class="card-text">78%</h2>
+                        <p class="card-text"><small>Status: Kritis</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card text-white bg-warning">
+                    <div class="card-body">
+                        <h5 class="card-title">Reject Rate</h5>
+                        <h2 class="card-text">1.5%</h2>
+                        <p class="card-text"><small>Perlu perhatian shift malam</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">Data Log Produksi Real-time</div>
+                    <div class="card-body">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Waktu</th>
+                                    <th>Mesin</th>
+                                    <th>Produk</th>
+                                    <th>Jumlah</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>08:00</td>
+                                    <td>CNC-01</td>
+                                    <td>Part A-12</td>
+                                    <td>50</td>
+                                    <td><span class="badge bg-success">OK</span></td>
+                                </tr>
+                                <tr>
+                                    <td>08:15</td>
+                                    <td>CNC-02</td>
+                                    <td>Part B-05</td>
+                                    <td>45</td>
+                                    <td><span class="badge bg-danger">Error</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="card">
+            <div class="card-header">Form Input Produksi Manual</div>
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Kode Mesin</label>
+                        <input type="text" class="form-control" placeholder="Masukkan kode mesin...">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Pilih Shift</label>
+                        <select class="form-select">
+                            <option selected>Pilih...</option>
+                            <option value="1">Shift 1 (Pagi)</option>
+                            <option value="2">Shift 2 (Siang)</option>
+                            <option value="3">Shift 3 (Malam)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Jumlah Produksi</label>
+                        <input type="number" class="form-control" placeholder="0">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kirim Data</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
