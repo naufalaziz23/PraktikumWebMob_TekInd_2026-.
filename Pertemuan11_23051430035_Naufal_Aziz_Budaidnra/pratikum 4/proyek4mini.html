@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kalkulator Biaya Produksi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+.container{
+background:white;
+width:420px;
+padding:30px;
+border-radius:18px;
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+h1{
+text-align:center;
+margin-bottom:20px;
+color:#333;
+}
+
+label{
+font-size:14px;
+font-weight:500;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#667eea;
+color:white;
+font-weight:600;
+cursor:pointer;
+}
+
+button:hover{
+background:#5563d6;
+}
+
+.result{
+margin-top:20px;
+padding:15px;
+background:#eef2ff;
+border-radius:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Kalkulator Biaya Produksi</h1>
+
+<label>Biaya Bahan Baku</label>
+<input type="number" id="bahanBaku" placeholder="Contoh: 2500000" min="0">
+
+<label>Biaya Tenaga Kerja</label>
+<input type="number" id="tenagaKerja" placeholder="Contoh: 500000" min="0">
+
+<label>Biaya Overhead</label>
+<input type="number" id="overhead" placeholder="Contoh: 250000" min="0">
+
+<label>Jumlah Produksi</label>
+<input type="number" id="jumlahProduksi" placeholder="Contoh: 1000" min="0">
+
+<button onclick="hitungBiaya()">Hitung Biaya Produksi</button>
+
+<div class="result">
+<p id="total"></p>
+<p id="status"></p>
+</div>
+
+</div>
+
+<script>
+
+function hitungBiaya(){
+
+let biayaBahanBaku = Number(document.getElementById("bahanBaku").value)
+let biayaTenagaKerja = Number(document.getElementById("tenagaKerja").value)
+let biayaOverhead = Number(document.getElementById("overhead").value)
+let jumlahProduksi = Number(document.getElementById("jumlahProduksi").value)
+
+let totalBiaya = biayaBahanBaku + biayaTenagaKerja + biayaOverhead
+let totalPerUnit = totalBiaya / jumlahProduksi
+
+document.getElementById("total").innerHTML =
+"Total Biaya per Unit : Rp " + totalPerUnit
+
+if (jumlahProduksi < 100){
+document.getElementById("status").innerHTML =
+"Status : Biaya Tinggi (Ekonomi Skala Kecil)"
+}else{
+document.getElementById("status").innerHTML =
+"Status : Biaya Efisien"
+}
+
+}
+
+</script>
+
+</body>
+</html>
